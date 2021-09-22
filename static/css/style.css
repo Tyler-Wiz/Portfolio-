@@ -30,11 +30,11 @@ body {
     --firstColorChangetext:#ef8354;
     --firstColorChangetextlight:#4f5d75;
     --firstColorChangetextdark:#2d3142;
-    --secondburlywood:#d9b26f;
-    --seconddeeptaupe:#795c5f;
-    --secondMetallicSunburst:#a69658;
-    --secondjasmine:#fadf7f;
-    --secondChampagne:#F2E29F;
+    --minimalbg:#eae7dc;
+    --minimalbgdark:#d8c3a5;
+    --minimalextra:#8e8d8a;
+    --minimallinklight:#e98074;
+    --minimallinkdark:#e85a4f;
 }
 
 
@@ -72,7 +72,7 @@ p{
 
 .home_wrapper{
     padding: 3rem;
-    height: 93vh;
+    height: 95vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ p{
     color: var(--lightgrey);
 }
 
-.home_wrapper span {
+.simple {
     color: var(--primary);
 }
 
@@ -129,11 +129,7 @@ p{
     color: var(--firstColorChangetext);
 }
 
-#retype-first{
-    color: var(--firstColorChangetextdark);
-}
-
-#simple-first{
+.simple-first{
     color: var(--firstColorChangetextdark);
 }
 
@@ -141,27 +137,25 @@ p{
     color: var(--firstColorChangetext);
 }
 
+/* Second Color Change */
+
 .home_wrapper-second{
-    background-color: var(--secondChampagne);
+    background-color: var(--minimalbg);
 }
 .home_main-second{
-    color: var(--seconddeeptaupe);
+    color: var(--minimallinkdark);
 }
 
 .home_desc-second{
-    color: var(--secondjasmine);
+    color: var(--minimalextra);
 }
 
-#retype-second{
-    color: var(--seconddeeptaupe);
-}
-
-#simple-second{
-    color: var(--seconddeeptaupe);
+.simple-second {
+    color: var(--minimallinkdark);
 }
 
 .home_name-second{
-    color: var(--secondjasmine);
+    color: var(--minimalextra);
 }
 
 /* header */
@@ -279,7 +273,7 @@ header{
     margin:2rem 1rem;
     top: 100%;
     right: 0; 
-    background-color:rgb(216, 216, 216);
+    background-color:rgb(229, 226, 226);
     opacity: 1;
     width: 40%;
     max-width: 200px;
@@ -295,16 +289,17 @@ header{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(102, 86, 86);
 }
 
 .toggle_list li {
    margin-right: .6rem; 
+   cursor: pointer;
 }
 
 .toggle_color:checked ~ .toggle_list {
     transform: scale(1, 1);
-    transition: transform 0.4s ease-in-out;
+    transition: transform .5s ease-in-out;
  }
  
  .toggle_color {
@@ -352,23 +347,23 @@ header{
 }
 
 .second_white {
-    background-color: var(--secondburlywood);
+    background-color: var(--minimalbg);
 }
 
 .second_grey {
-    background-color: var(--seconddeeptaupe);
+    background-color: var(--minimalbgdark);
 }
 
 .second_orange {
-    background-color: var(--secondMetallicSunburst);
+    background-color: var(--minimallinkdark);
 }
 
 .second_blue {
-    background-color:var(--secondjasmine) ;
+    background-color:var(--minimallinklight) ;
 }
 
 .second_blueray {
-    background-color: var(--secondChampagne);
+    background-color: var(--minimalextra);
 }
 
 
@@ -403,7 +398,7 @@ header{
     background-color: white;
     padding: 2rem;
     border-radius: 30px;
-    box-shadow: 2px 2px 3px rgb(138, 138, 138);
+    box-shadow: rgb(157, 173, 189) 0px 20px 30px -10px;
 }
 
 .skill{
@@ -414,8 +409,8 @@ header{
 .skill_two,
 .skill_three {
     width: 90%;
-    height: 10px;
-    background-color: rgb(187, 187, 187);
+    height: .9rem;
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
     margin-bottom: 4rem;
     position: relative;
@@ -426,23 +421,22 @@ header{
 
 .progress_one{
     background: linear-gradient(to right, #73bb00d0, #88a506);
-	box-shadow: 0 2px 2px -3px #b6a12b, 0 2px 5px #d3cace;
+	box-shadow: 0 2px 2px -3px #524606, 0 2px 5px #d3cace;
 	border-radius: 15px;
-	color: #e3e2df;
+	color: #dfdfdf;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	height: 100%;
 	width: 0;
 	opacity: 0;
-    
-	transition: 5.5s ease 0.3s;
+	transition: 3.5s ease 0.3s;
     position: relative;
 }
 
 .progress_two{
     background: linear-gradient(to right, #eb67a0, #dd5480);
-	box-shadow: 0 2px 2px -3px #e277a5, 0 2px 5px #d86194;
+	box-shadow: 0 2px 2px -3px #413d3e, 0 2px 5px #d86194;
 	border-radius: 15px;
 	color: #e3e2df;
 	display: flex;
@@ -451,7 +445,7 @@ header{
 	height: 100%;
 	width: 0;
 	opacity: 0;
-	transition: 5.5s ease;
+	transition: 3.5s ease;
     position: relative;
 }
 
@@ -466,7 +460,7 @@ header{
 	height: 100%;
 	width: 0;
 	opacity: 0;
-	transition: 5.5s ease;
+	transition: 3.5s ease;
     position: relative;
 }
 
@@ -487,6 +481,44 @@ header{
 .skill_title{
     position: absolute;
     top: -30px; 
+}
+
+/* ==========
+    Work
+============ */
+
+.work{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin-bottom: 10rem;
+    text-transform: capitalize;
+}
+
+.work_icons{
+    width: 50px;
+    height: 50px;
+}
+
+.work_icons-color{
+    fill: var(--secondary);
+}
+
+.hours,
+.coffee,
+.projects,
+.clients {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.work span {
+    font-size: 1.4rem;
+    font-weight: 900;
 }
 
 /* ==================
