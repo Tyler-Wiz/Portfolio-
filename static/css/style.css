@@ -14,6 +14,7 @@ body {
     line-height: 1.6;
     letter-spacing: 0.1rem;
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--lightgrey);
 }
 
 /* ==================
@@ -24,7 +25,7 @@ body {
     --primary:#61892F;
     --secondary:#86C232;
     --background:#222629;
-    --lightgrey:#e0e0e0;
+    --lightgrey:#f1f1f1;
     --firstColorChangebg:#ffffff;
     --firstColorChangedarkbg:#bfc0c0;
     --firstColorChangetext:#ef8354;
@@ -316,6 +317,10 @@ header{
     cursor: pointer;
 }
 
+.toggle_wheel:hover{
+    animation: rotate-center 2000ms infinite;
+}
+
 .toggle_wheel--color{
     fill: var(--secondary);
 }
@@ -504,7 +509,7 @@ header{
 }
 
 .work_icons-color{
-    fill: var(--secondary);
+    fill: var(--background);
 }
 
 .hours,
@@ -517,9 +522,69 @@ header{
 }
 
 .work span {
-    font-size: 1.4rem;
+    font-size: 2.8rem;
     font-weight: 900;
 }
+
+/* ================
+   featured Projects
+==================== */
+.project_wrapper{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.f_projects{
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 20px 0 50px;
+}
+
+.f_image {
+    display: flex;
+    justify-content: center;
+}
+
+.f_image img{
+    width: 250px;
+    height: 200px;
+}
+
+.f_text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    background-color: var(--background);
+    padding: 2rem;
+    color: var(--lightgrey);
+    border-radius: 0 50px ;
+}
+
+.tech_used{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.tech_used span{
+   margin-right: .5rem;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0);
+    border: 2px solid var(--primary);
+    width: 15rem;
+    padding: 1rem 2rem;
+    color: white;
+}
+
 
 /* ==================
    Animations
@@ -576,5 +641,27 @@ header{
       opacity: 0;
     }
   }
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
 
   
