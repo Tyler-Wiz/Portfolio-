@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: rgb(71, 69, 90);
+    --secondary: rgb(209, 209, 209);
+    --accent: rgb(214 83 43);
+    --text-light: rgb(255, 255, 255);
+    --text-dark: rgb(0, 0, 0);
+    --background: rgb(247, 245, 251);
+    --herobackground: rgb(239, 242, 241);
+  }
+
+  .theme-dark {
+    --primary: #c5c6c7;
+    --secondary: rgb(209, 209, 209);
+    --accent: #45a29e;
+    --text-light: rgb(0, 0, 0);
+    --text-dark: rgb(255, 255, 255);
+    --background: #1f2833;
+    --herobackground: rgb(239, 242, 241);
+  }
+}
